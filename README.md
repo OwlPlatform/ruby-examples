@@ -1,4 +1,4 @@
 ruby-examples
 =============
 
-Examples of scripts to send and request data from the world model Aggregator and World Model
+Examples Ruby scripts that send and request data from the Aggregator and World Model.
