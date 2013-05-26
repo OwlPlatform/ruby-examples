@@ -58,7 +58,7 @@ sleep 1
 #Connect to the world model as a client
 cwm = ClientWorldConnection.new(wmip, client_port)
 
-#Search for the bus name that we just added and anything else named bus.*
+#Search for the bus name that we just added and anything else named yourexample.*
 puts "Searching for URIs"
 result = cwm.URISearch('yourexample\\..*')
 names = result.get()
@@ -97,7 +97,7 @@ swm.deleteURI('yourexample.b')
 
 puts "Searching to verify that the URI has been deleted."
 #Verify that it is now gone
-result = cwm.URISearch('bus\\..*')
+result = cwm.URISearch('yourexample\\..*')
 names = result.get()
 puts "There are #{names.length} matching names"
 
