@@ -20,7 +20,8 @@ sq = SolverAggregator.new(aggip, port)
 #Request packets from physical layer 1, don't specify a transmitter ID or
 #mask, and request packets every 4000 milliseconds
 #Phy 1 is for pips. Phy 0 is for all devices on every phy.
-sq.sendSubscription([AggrRule.new(1, [], 4000)])
+#sq.sendSubscription([AggrRule.new(1, [], 1000)])
+sq.sendSubscription([AggrRule.new(1, [IDMask.new(2890)], 0)])
 
 while (sq.handleMessage) do
   if (sq.available_packets.length != 0) then
@@ -28,6 +29,8 @@ while (sq.handleMessage) do
     for packet in sq.available_packets do
       puts packet
     end
+		#Clear the queue of incoming packets.
+		sq.available_packets = []
   end
 end
 
