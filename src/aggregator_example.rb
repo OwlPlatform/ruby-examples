@@ -20,8 +20,9 @@ sq = SolverAggregator.new(aggip, port)
 #Request packets from physical layer 1, don't specify a transmitter ID or
 #mask, and request packets every 4000 milliseconds
 #Phy 1 is for pips. Phy 0 is for all devices on every phy.
-#sq.sendSubscription([AggrRule.new(1, [], 1000)])
-sq.sendSubscription([AggrRule.new(1, [IDMask.new(2890)], 0)])
+sq.sendSubscription([AggrRule.new(1, [], 1000)])
+#If we wanted to only search for a specific transmitter, this is the way:
+#sq.sendSubscription([AggrRule.new(1, [IDMask.new(2890)], 0)])
 
 while (sq.handleMessage) do
   if (sq.available_packets.length != 0) then
