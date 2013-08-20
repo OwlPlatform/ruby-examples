@@ -5,7 +5,7 @@
 
 #Require rubygems for old (pre 1.9 versions of Ruby and Debian-based systems)
 require 'rubygems'
-require 'solver_aggregator'
+require 'libowl'
 
 if (ARGV.length != 2)
   puts "This program needs the ip address and client port of an aggregator to connect to!"

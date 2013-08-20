@@ -5,9 +5,7 @@
 
 #Require rubygems for old (pre 1.9 versions of Ruby and Debian-based systems)
 require 'rubygems'
-require 'client_world_connection.rb'
-require 'wm_data.rb'
-require 'buffer_manip.rb'
+require 'libowl'
 
 if (ARGV.length != 2)
   puts "This program needs the ip address and client port of a world model to connect to!"
@@ -31,8 +29,8 @@ result.each_pair {|uri, attributes|
   attributes.each {|attr|
 		puts attr
 		#Example of decoding some data
-		if (attr.name == "temperature.celcius")
-			puts "temperature in celcius is #{attr.data.unpack('G')}"
+		if (attr.name == "temperature.celsius")
+			puts "temperature in celsius is #{attr.data.unpack('G')}"
 		end
   }
 }

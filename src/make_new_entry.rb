@@ -5,9 +5,7 @@
 
 #Require rubygems for old (pre 1.9 versions of Ruby and Debian-based systems)
 require 'rubygems'
-require 'solver_world_model'
-require 'wm_data'
-require 'buffer_manip'
+require 'libowl'
 
 if (ARGV.length != 6)
   puts "This program needs six arguments."
