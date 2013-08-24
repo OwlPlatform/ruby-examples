@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'libowl/solver_world_model.rb'
+require 'libowl'
 
 if (ARGV.length != 3)
   puts "The first two arguments of this program are the ip address and"
