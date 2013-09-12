@@ -12,7 +12,7 @@ if (ARGV.length != 6)
   puts "The ip address and solver port a world model to connect to"
   puts "and a username for the solver connection"
 	puts "The next three arguments are the full demo object name,"
-  puts "a sensor ID (in decimal), and a dislay name of a pip to add"
+  puts "a sensor ID (in decimal), and a display name of a pip to add"
   puts "to the demo page."
   exit
 end
