@@ -80,7 +80,7 @@ names.each_key{|name|
         puts "\t#{attr.name} is '#{readUTF16(attr.data)}'"
       elsif (attr.name == "creation")
         #Creation times are packed as 64 bit integers
-        puts "\t#{attr.name} is #{unpackuint64(attr.data)}"
+        puts "\tCreation time is #{attr.creation}"
       else
         puts "\t#{attr.name} is unrecognized"
       end
@@ -89,8 +89,8 @@ names.each_key{|name|
 }
 
 #Now delete the URIs we added
-swm.deleteURI('yourexample.a')
-swm.deleteURI('yourexample.b')
+#swm.deleteURI('yourexample.a')
+#swm.deleteURI('yourexample.b')
 
 puts "Searching to verify that the URI has been deleted."
 #Verify that it is now gone
